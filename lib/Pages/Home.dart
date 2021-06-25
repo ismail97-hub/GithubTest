@@ -1,4 +1,6 @@
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:githubtestapp/Pages/page1.dart';
 
 class Home extends StatefulWidget {
   const Home({ Key key }) : super(key: key);
@@ -22,7 +24,8 @@ class _HomeState extends State<Home> {
           FlatButton(
           color: Colors.orangeAccent,
           onPressed: (){
-
+            Navigator.of(context).push(CupertinoPageRoute(
+                builder: (context) => Page1()));
           }, 
           child: Text("Page 2",style: TextStyle(fontWeight: FontWeight.bold))),
         ],
